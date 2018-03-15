@@ -1,6 +1,6 @@
 var io = require('socket.io')(process.envPort||3000);
 var MongoClient = require('mongodb').MongoClient;
-var url = "mongo://localhost:27017/"
+var url = "mongodb://localhost:27017/"
 var shortid = require('shortid');
 var express = require('express');
 var logger = require('morgan');

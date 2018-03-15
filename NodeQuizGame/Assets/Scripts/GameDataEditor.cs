@@ -7,7 +7,7 @@ using SocketIO;
 
 public class GameDataEditor : EditorWindow {
 
-    string gameDataFilePath = "/SteamingAssets/data.json";
+    string gameDataFilePath = "/StreamingAssets/data.json";
     public GameData editorData;
     static GameObject server;
     static SocketIOComponent socket;
