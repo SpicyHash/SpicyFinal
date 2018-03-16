@@ -8,7 +8,7 @@ using SocketIO;
 public class GameDataEditor : EditorWindow {
 
     string gameDataFilePath = "/StreamingAssets/data.json";
-    public GameData editorData;
+    public QandAData editorData;
     static GameObject server;
     static SocketIOComponent socket;
     Vector2 scrollPos;
@@ -69,11 +69,11 @@ public class GameDataEditor : EditorWindow {
         if (File.Exists(filePath))
         {
             string gameData = File.ReadAllText(filePath);
-            editorData = JsonUtility.FromJson<GameData>(gameData);
+            editorData = JsonUtility.FromJson<QandAData>(gameData);
         }
         else
         {
-            editorData = new GameData();
+            editorData = new QandAData();
         }
     }
 
@@ -98,7 +98,7 @@ public class GameDataEditor : EditorWindow {
     void ReceiveServerData(SocketIOEvent e)
     {
         Debug.Log("Received data from server");
-        editorData = JsonUtility.FromJson<GameData>(e.data.ToString());
+        editorData = JsonUtility.FromJson<QandAData>(e.data.ToString());
         Repaint();
     }
 }

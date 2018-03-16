@@ -54,6 +54,7 @@
      <Compile Include="Assets\Scripts\GameData.cs" />
      <Compile Include="Assets\Scripts\GameDataEditor.cs" />
      <Compile Include="Assets\Scripts\MenuController.cs" />
+     <Compile Include="Assets\Scripts\PlayerData.cs" />
      <Compile Include="Assets\Scripts\QuestionData.cs" />
      <Compile Include="Assets\Scripts\RoundData.cs" />
      <Compile Include="Assets\SocketIO\JSONObject\JSONObject.cs" />
